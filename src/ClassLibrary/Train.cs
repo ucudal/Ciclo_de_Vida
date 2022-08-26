@@ -13,6 +13,20 @@ namespace ClassLibrary
     /// </summary>
     public class Train
     {
+        public static int count = 0;
+        private string id{get;set;} 
+        public Train (string identificador)
+        {
+            count++;
+            id=identificador;
+            Console.WriteLine("Construyendo...");
+        }
+        ~Train()
+        {
+            count--;
+        } 
+
+
         /// <summary>
         /// Obtiene un valor que indica si las maquinas del tren han sido encendidas o no.
         /// </summary>
